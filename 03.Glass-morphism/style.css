@@ -1,0 +1,55 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-image: url(./alexander-psiuk-jE9Agm8Do7k-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-container {
+  height: 520px;
+  width: 350px;
+  padding: 30px 50px;
+  border-radius: 50px;
+  /* glass-effect */
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(2px);
+  /* to make better */
+  border-top: 1px solid rgb(255, 255, 255, 0.4);
+  border-left: 1px solid rgb(255, 255, 255, 0.3);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: poppins, sans-serif;
+  font-style: 18px;
+  text-align: justify;
+  line-height: 185%;
+}
+
+
+
+h1 {
+  margin: 30px;
+  color: white;
+}
