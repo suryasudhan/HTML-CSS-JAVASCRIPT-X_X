@@ -1,0 +1,77 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fcf;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  width: 300px;
+  height: 60px;
+  background: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  /* position:relative , because of we working with {before and after atributes } */
+  position: relative;
+  /* keeps transitons to be smooter  */
+  transition: all 0.2s;
+  color: #fff;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  /*  */
+  background-color: #06c988a4;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  transform-origin: top;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  /*  */
+  background: #ffff00a6;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+
+a:hover:before {
+  top: -6px;
+  left: 0;
+  transform: perspective(1000px) rotatex(75deg);
+}
+
+a:hover::after {
+  top: 6px;
+  left: 0;
+  transform: perspective(1000px) rotatex(75deg);
+}
+
+a:hover {
+  color: #000;
+}
